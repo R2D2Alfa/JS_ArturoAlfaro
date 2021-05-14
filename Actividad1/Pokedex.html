@@ -9,16 +9,76 @@
 <body>
     <script>
         class Pokemon{
-            constructor(nombre, naturleza, tipo, vida : number = 100, ataque, defensa, velocidad, nivel){
-                this.nombre = nombre;
-                this.naturaleza = naturaleza;
-                this.tipo = tipo;
-                this.vida = vida;
-                this.ataque = ataque;
-                this.defensa = defensa;
-                this.velocidad = velociad;
-                this.nivel = nivel
+            constructor(nombre, naturleza, tipo, vida, ataque, defensa, velocidad, nivel){
+                this.Nombre = nombre;
+                this.Naturaleza = naturaleza;
+                this.Tipo = tipo;
+                this.Vida = vida;
+                this.Ataque = ataque;
+                this.Defensa = defensa;
+                this.Velocidad = velociad;
+                this.Nivel = nivel;
             }
+
+        Subir_nivel() {
+            console.log('Su pokemon ha subido de nivel');
+            if(Nivel <= 100){
+                this.Nivel++;
+            }
+            else{
+                console.log('Su pokemon ha alcanzado su nivel máximo');
+            }
+            if(Naturaleza == 'Alegre'){
+                this.Velocidad+=4;   
+            }
+            elseif(Naturaleza == 'Audaz'){
+                this.Ataque+=4;
+            }
+            else if(Naturaleza == 'Osada'){
+                this.Defensa+=4;   
+            }
+            else if(Naturaleza == 'Cauta'){
+                this.Vida+=4;   
+            }
+        
+        }
+        Presentarse(){
+            console.log(' Hola me llamo ' + ' ' + this.Nombre + ' ' +'soy' + ' ' + this.Tipo + ' ' +' y estoy al nivel ' + ' ' + this.Nivel);
+        }
+        Suma_estadisticas(){
+            let suma=this.Ataque+this.Velocidad+this.Defensa+this.Vida;
+            console.log(suma);
+        }
+        Promedio_estadisticas(){
+            let prom=(this.Ataque+this.Velocidad+this.Defensa+this.Vida)/4;
+            console.log(prom);
+
+        }
+}
+ const Psyduck= new Pokedex(Nombre='Psyduck', Naturaleza='Cauta', Tipo='Agua', Vida=50, Ataque=52, Defensa=48, Velocidad=55, Nivel=1);
+ gyarados.Presentarse();
+ gyarados.Suma_estadisticas();
+ gyarados.Promedio_estadisticas();
+
+ const Charizard = new Pokedex(Nombre='Charizard', Naturaleza='Cauta', Tipo='Fuego', Vida=78, Ataque=84, Defensa=78, Velocidad=100, Nivel=1);
+ umbreon.Presentarse();
+ umbreon.Suma_estadisticas();
+ umbreon.Promedio_estadisticas();
+
+ const Entei = new Pokedex(Nombre='Entei', Naturaleza='Cauta', Tipo='Fuego', Vida=115, Ataque=115, Defensa=85, Velocidad=100, Nivel=1);
+ pikachu.Presentarse();
+ pikachu.Suma_estadisticas();
+ pikachu.Promedio_estadisticas();
+
+ const Bulbasaur = new Pokedex(Nombre='Bulbasaur', Naturaleza='Cauta', Tipo='Planta', Vida=45, Ataque=49, Defensa=49, Velocidad=45, Nivel=1);
+ unown.Presentarse();
+ unown.Suma_estadisticas();
+ unown.Promedio_estadisticas();
+
+ const Latias = new Pokedex(Nombre='Latias', Naturaleza='Alegre', Tipo='Dragón', Vida=80, Ataque=80, Defensa=90, Velocidad=110, Nivel=1);
+ lugia.Presentarse();
+ lugia.Suma_estadisticas();
+ lugia.Promedio_estadisticas();
         }
 
     </script>
