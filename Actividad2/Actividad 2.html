@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //constante random de 1 a 11
+const largo = Math.floor(Math.random()*10)+1;
+//Imprime largo
+console.log(largo);
+//Variable fibonacci
+    let fibonacci = [];
+    //Asigno valores a las variables que ocupare para fibonacci
+e=0;
+    k=1;
+    t=largo;
+    //Primer for, mientras i sea menor a random, hacer fila
+for (let i=0; i<largo; i++){
+        fibonacci[i] = new Array();
+    //Segundo for, mientras j sea menor a random hacer columnas    
+        for (let j=0; j<largo; j++){
+            //En el primer punto insertar el valor 1
+            if(j==0 && i==0)
+            {
+                fibonacci [i].push(1);
+            }
+            //Formula de fibonacci
+            else{
+                d=e+k;
+                fibonacci[i].push(d);
+                e=k;
+                k=d;
+            }
+        }
+        //Si la fila es impar hacerla al reves
+        if(i % 2 != 0){
+        fibonacci[i].reverse();
+        }
+}
+//Imprimir el gusanito
+console.log(fibonacci);
+
+
+</script>
+</body>
+</html>
