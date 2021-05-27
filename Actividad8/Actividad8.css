@@ -1,0 +1,29 @@
+div{
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    background-color: grey;
+    width: 600px;
+    height: 400px;
+}
+
+#myCanvas{
+    background-color: white;
+}
+
+#canvas{
+    position: absolute;
+    left: 0%;
+    top:0%;
+}
+
+#izq{
+    position: absolute;
+    top: 0%;
+    left: 67%;
+    width: 200px;
+    height: 400px;
+    color: white;
+    background-color: indigo;
+    z-index: 2;
+}
